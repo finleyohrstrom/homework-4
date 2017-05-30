@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+	<head>
+
+		<meta charset="UTF-8">
+	    <title>Grillz Game</title>
+
+	    <!-- Our CSS style sheet -->
+	    <link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		
+	</head>
+
+	<body>
+	
+		<h1>Crystal Game!</h1>
+		<div class="instructions">
+			<p>
+				You will be given a random number at the start of the game. 
+				<br>
+				There are four grillz below. By clicking on a grill you will add a specific amount of point to your total score.
+				<br>
+				You win the game by matching your total score to the random number, you lose the game if our total score goes above the random number.
+				<br>
+				The value of each grill is hidden from you until you click on it.
+				<br>
+				Each time when the game starts, the game will ghange the value of each grill.
+			</p>
+		</div>
+		<div class="randomNumber">
+			
+		</div>
+		<div class="winsLosses">
+			<p class="wins">Wins: </p>
+			<br>
+			<p class="losses">Losses: </p>
+		</div>
+		<table class="grillz">
+			<tr>
+				<td class="oneCrystal"><img src="https://img1.etsystatic.com/133/0/11229198/il_570xN.1043926305_f5si.jpg" style="height: 150px; width: 150px"></td>
+				<td class="twoCrystal"><img src="https://img0.etsystatic.com/112/1/11229198/il_570xN.976854182_avv2.jpg" style="height: 150px; width: 150px"></td>
+				<td class="threeCrystal"><img src="https://img1.etsystatic.com/140/1/11229198/il_570xN.1067389599_nx6p.jpg" style="height: 150px; width: 150px"></td>
+				<td class="fourCrystal"><img src="https://img0.etsystatic.com/146/1/11229198/il_570xN.1098608090_egjs.jpg" style="height: 150px; width: 150px"></td>
+			</tr>
+		</table>
+		<div>
+				<p>Your total score is: </p>
+		</div>
+		<div class="totalScore">
+
+		</div>
+		
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+
+				function randomNumber(min, max) {
+
+					num = min + Math.floor(Math.random() * (max - min)) + 1;
+					return num;
+				};
+
+				function randomGrillOne(min, max) {
+
+					num = min + Math.floor(Math.random() * (max - min)) + 1;
+					return num;
+				};
+				function randomGrillTwo(min, max) {
+
+					num = min + Math.floor(Math.random() * (max - min)) + 1;
+					return num;
+				};
+				function randomGrillThree(min, max) {
+
+					num = min + Math.floor(Math.random() * (max - min)) + 1;
+					return num;
+				};
+				function randomGrillFour(min, max) {
+
+					num = min + Math.floor(Math.random() * (max - min)) + 1;
+					return num;
+				};
+				
+				var wins = 0
+				var losses = 0
+				var totalScore = 0
+
+				var randomBiggerNumber = randomNumber(35, 110)
+
+				var oneGrill = randomGrillOne(1,12) 
+				var twoGrill = randomGrillTwo(1,12)
+				var threeGrill = randomGrillThree(1,12)
+				var fourGrill = randomGrillFour(1,12)
+
+				console.log(oneGrill)
+				console.log(twoGrill)
+				console.log(threeGrill)
+				console.log(fourGrill)
+				console.log(randomSmallerNumber)
+				console.log(randomBiggerNumber)
+
+
+
+			});
+
+
+
+		</script>
+	</body>
+</html>
